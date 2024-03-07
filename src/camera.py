@@ -1,13 +1,19 @@
 import cv2
+import classifier as ci
 
 
 def main():
+    face_class = ci.face_class()
+    
     # define a video capture object
     vid = cv2.VideoCapture(0)
 
     while True:
         # Capture the video frame by frame
         ret, frame = vid.read()
+
+        # Add detection box to video
+        faces = ci.detect_box(frame, face_class) 
 
         # Display the resulting frame
         cv2.imshow("frame", frame)
