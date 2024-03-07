@@ -12,3 +12,10 @@ use your face like a key
 3. Install requirements.txt
 `pip install -r requirements.txt`
 
+## Run camera
+
+1. Source into virtual environment if not already
+`source .venv/bin/activate`
+
+2. Run the camera
+`python -m src.camera`
